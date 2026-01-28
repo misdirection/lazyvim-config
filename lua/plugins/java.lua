@@ -1,0 +1,41 @@
+return {
+  -- Disable nvim-jdtls (conflicts with nvim-java)
+  -- { "mfussenegger/nvim-jdtls", enabled = false },
+
+  -- Configure jdtls with decompiler bundles
+  -- {
+  --   "mfussenegger/nvim-jdtls",
+  --   opts = function(_, opts)
+  --     -- Find decompiler JARs installed by Mason
+  --     local decompiler_path = vim.fn.stdpath("data") .. "/mason/share/vscode-java-decompiler/bundles"
+  --     local bundles = {}
+  --
+  --     -- Add all decompiler JARs
+  --     for _, jar in ipairs(vim.fn.glob(decompiler_path .. "/*.jar", false, true)) do
+  --       table.insert(bundles, jar)
+  --     end
+  --
+  --     -- Merge with existing bundles
+  --     opts.jdtls = opts.jdtls or {}
+  --     opts.jdtls.init_options = opts.jdtls.init_options or {}
+  --     opts.jdtls.init_options.bundles = vim.list_extend(opts.jdtls.init_options.bundles or {}, bundles)
+  --
+  --     return opts
+  --   end,
+  -- },
+  -- {
+  --   "nvim-java/nvim-java",
+  --   dependencies = {
+  --     "nvim-java/lua-async-await",
+  --     "nvim-java/nvim-java-core",
+  --     "nvim-java/nvim-java-test",
+  --     "nvim-java/nvim-java-dap",
+  --     "mfussenegger/nvim-dap",
+  --     "neovim/nvim-lspconfig",
+  --   },
+  --   config = function()
+  --     require("java").setup()
+  --     vim.lsp.enable("jdtls")
+  --   end,
+  -- },
+}

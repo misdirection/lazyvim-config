@@ -1,0 +1,7 @@
+[core]
+markdown.file_extensions = ["md"]
+
+[lint]
+# Disable MD022 (blanks-around-headings) and MD032 (blanks-around-lists)
+MD022 = false
+MD032 = false
