@@ -4,6 +4,7 @@
 
 -- Add German to spell checking
 vim.opt.spelllang = { "en", "de" }
+vim.opt.clipboard = ""
 
 -- Sets clipboard when using WSL
 if vim.fn.has("wsl") == 1 then
@@ -14,8 +15,8 @@ if vim.fn.has("wsl") == 1 then
       ["*"] = "clip.exe",
     },
     paste = {
-      ["+"] = 'powershell.exe -c Get-Clipboard',
-      ["*"] = 'powershell.exe -c Get-Clipboard',
+      ["+"] = "powershell.exe -c Get-Clipboard",
+      ["*"] = "powershell.exe -c Get-Clipboard",
     },
     cache_enabled = 0,
   }
