@@ -14,3 +14,9 @@ end, { desc = "Find Word Under Cursor" })
 
 -- Copy to system clipboard with Ctrl+C (works in WSL and native Linux)
 vim.keymap.set("v", "<C-c>", '"+y', { desc = "Copy to clipboard" })
+
+-- Exit insert mode with jj
+vim.keymap.set("i", "jj", "<Esc>", { desc = "Exit insert mode" })
+
+-- Save buffer with Shift+ww
+vim.keymap.set({ "n", "i" }, "<S-w><S-w>", "<cmd>w<cr>", { desc = "Save buffer" })
