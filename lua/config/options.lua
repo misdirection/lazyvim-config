@@ -18,6 +18,6 @@ if vim.fn.has("wsl") == 1 then
       ["+"] = "powershell.exe -c Get-Clipboard",
       ["*"] = "powershell.exe -c Get-Clipboard",
     },
-    cache_enabled = 0,
+    cache_enabled = 1,
   }
 end
